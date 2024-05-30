@@ -7,8 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center p-12">
-      <Link href="./contactList">Contact List UX</Link>
+    <main className="flex items-center justify-center p-12 flex-col">
+      <Link href="./contactListA">Contact List UX A</Link>
+      <Link href="./contactListB">Contact List UX B</Link>
     </main>
   );
 }

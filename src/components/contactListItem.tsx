@@ -6,7 +6,7 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card"
-import { Ellipsis } from "lucide-react";
+import { Ellipsis, Mail } from "lucide-react";
 
 
 function getInitials(name: string): string {
@@ -43,11 +43,19 @@ export default function ContactListItem(props: any) {
             <AvatarFallback>{initials}</AvatarFallback>
           </Avatar>
           <div className="flex flex-col grow">
-            <p className="text-sm font-medium whitespace-nowrap">{props.name}</p>
+            <p className="text-sm font-medium whitespace-nowrap">{props.name}
+            <span className="text-sm font-normal text-slate-400"> · {getRandomElement(position)}</span></p>
             <p className="text-sm text-muted-foreground">
+              
               {generateEmail(props.name, getRandomElement(domain))}
             </p>
+            
           </div>
+          <div className="flex items-center gap-2">
+          <p className="text-sm text-slate-400">
+          
+            </p>
+            </div>
           <Ellipsis className="w-4 h-4 text-slate-400" />
         </div>
       </CardContent>

@@ -6,10 +6,10 @@ const name = ["Olivia Smith", "Kristoffer Johnsson", "Oscar Karlsson", "Thuy Ngu
 ]
 
 
-export default function ContactList() {
+export default function ContactListA() {
   return (
-    <main className="flex items-center justify-center p-12">
-      <div className="grid grid-cols-2 gap-3">
+    <main className="flex w-full items-center justify-center p-12">
+      <div className="grid grid-cols-2 gap-3 grow">
       {name.map((item, index)=> {
         return <ContactListItem name={item} key={index} />
       })}
